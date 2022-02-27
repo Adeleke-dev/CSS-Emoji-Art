@@ -1,0 +1,114 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #bdbdbd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.emoji{
+    --emoji-size: 200px;
+    margin: 1rem;
+    width: var(--emoji-size);
+    height: var(--emoji-size);
+}
+.head{
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    background-color: #ffcb3b;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+}
+.eyes{
+    position: absolute;
+    top: calc(var(--emoji-size) * .25);
+    left: calc(var(--emoji-size) * .5);
+    /* left: 100px; */
+    /* top: 50px; */
+    /* height: 80px; */
+    /* height: 5rem; */
+    /* width: 5rem; */
+    /* width: 80px; */
+}
+.eye{
+    position: absolute;
+    width: calc(var(--emoji-size) * .075);
+    height: calc(var(--emoji-size) * .15);
+    /* width: 15px; */
+    /* height: 30px; */
+    background-color: #000;
+    border-radius: 50%;
+}
+.eye-left{
+    left: calc(var(--emoji-size) * -.2);
+}
+.eye-right{
+    right: calc(var(--emoji-size) * -.2);
+}
+.mouth{
+    position: absolute;
+    background-color: #000;
+    bottom: calc(var(--emoji-size) * .15);
+    left: calc(var(--emoji-size) * .5);
+    transform: translateX(-50%);
+}
+.smile{
+     --mouth-height: calc(var(--emoji-size) * .3);
+    /* position: absolute; */
+    /* background-color: #000; */
+    width: calc(var(--emoji-size) * .6);
+    height: calc(var(--emoji-size) * .3);
+    /* bottom: calc(var(--emoji-size) * .15); */
+    /* left: calc(var(--emoji-size) * .5 ); */
+    /* transform: translateX(-50%); */
+    border-radius: 5% 5% 60px var(--mouth-height);
+}
+.open-mouth{
+     width: calc(var(--emoji-size) * .25);
+     height: calc(var(--emoji-size) * .3);
+     border-radius: 50%;
+}
+.face-mask{
+    width: calc(var(--emoji-size) * .6);
+    height: calc(var(--emoji-size) * .35);
+    border-radius: 10%;
+    background-color: #fff;
+    border: calc(var(--emoji-size) * .02) solid #999;
+    left: calc(var(--emoji-size) * .2);
+    transform: none;
+}
+.strap{
+     position: absolute;
+     background-color: #fff;
+     border: calc(var(--emoji-size) * .02) solid #999;
+     width: calc(var(--emoji-size) * .5);
+     height: calc(var(--emoji-size) * .1);
+     z-index: -2;
+   
+}
+.strap-top-left{
+    transform: rotate(20deg);
+    top: calc(var(--emoji-size) * -.05);
+    left: calc(var(--emoji-size) * -.4);
+}
+.strap-top-right{
+    transform: rotate(-20deg);
+    top: calc(var(--emoji-size) * -.05);
+    right: calc(var(--emoji-size) * -.4);
+}
+.strap-bottom-left{
+    transform: rotate(-30deg);
+    bottom: calc(var(--emoji-size) * -.06);
+    left: calc(var(--emoji-size) * -.4);
+}
+.strap-bottom-right{
+    transform: rotate(30deg);
+    bottom: calc(var(--emoji-size) * -.06);
+    right: calc(var(--emoji-size) * -.4);
+}
